@@ -80,11 +80,12 @@ class TrackList extends Component {
             </TableBody>
           </Table>
         </TableContainer>
-        <TrackModal
-          isOpen={modalIsOpen}
-          closeModal={this.closeModal}
-          trackElement={selectedTrack}
-        />
+        {modalIsOpen && (
+          <TrackModal
+            closeModal={this.closeModal}
+            trackElement={selectedTrack}
+          />
+        )}
       </>
     );
   }

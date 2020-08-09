@@ -5,41 +5,40 @@ export default makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    boxSizing: 'border-box',
     overflowX: 'auto',
   },
   paper: {
-    outline: 'none',
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '8px',
-    padding: theme.spacing(0, 0, 4, 4),
-    boxSizing: 'border-box',
     minWidth: 550,
+    '@media (max-width:550px)': {
+      minWidth: 250,
+    },
+  },
+  title: {
+    marginRight: theme.spacing(4),
   },
   artistImageContainer: {
     width: 250,
+    paddingTop: theme.spacing(3),
+    '@media (max-width:550px)': {
+      alignSelf: 'center',
+    },
   },
   artistImage: {
     borderRadius: '4px',
   },
-  containerRow: {
+  container: {
     display: 'flex',
     flexDirection: 'row',
+    '@media (max-width:550px)': {
+      flexDirection: 'column',
+    },
   },
   trackInformationContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    flex: 1,
-    padding: theme.spacing(0, 4, 0, 0),
-  },
-  trackPositionContainer: {
-    display: 'flex',
-    flexDirection: 'column',
+    marginLeft: theme.spacing(3),
   },
   closeButton: {
-    display: 'flex',
-    justifyContent: 'flex-end',
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
   },
 }));
